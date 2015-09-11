@@ -3,7 +3,10 @@ $.ajax({
 type: 'POST',
 url: 'https://mandrillapp.com/api/1.0/messages/send.json',
 data: {
-'key': 'YNFDoAWm5FEa5d7kANAZsQ',
+  
+  //YNFDoAWm5FEa5d7kANAZsQ
+
+'key': 'Eqk9dRDWBPcr7GVvHWoNtQ',
 'message': {
 'from_name': byName('name').value,
 'from_email': byName('mail').value,
@@ -21,13 +24,6 @@ data: {
 }
 }).done(function(response) {
 console.log(response);
-setCookie("name", byName("name").value);
-setCookie("mail", byName("mail").value);
-setCookie("toName", byName("toName").value);
-setCookie("toMail", byName("toMail").value);
-setCookie("subject", byName("subject").value);
-setCookie("body", byName("body").value);
-setCookie("cycleNum", byName("cycleNum").value);
 });
 }
 var blnSendMailCycle = null;
